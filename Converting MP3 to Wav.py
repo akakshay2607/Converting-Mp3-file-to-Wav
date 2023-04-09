@@ -1,15 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-
+# importing necessary libraries
 import librosa
 import soundfile as sf
 import os
 
-input_folder = "C://Users/akaks/Downloads/MP3/"
-output_folder = "C://Users/akaks/Downloads/Wav/"
+input_folder = "C://Users/akaks/Downloads/MP3/"      # path to input folder
+output_folder = "C://Users/akaks/Downloads/Wav/"     # path to output folder
 
 # Looping through files
 for audio in os.listdir(input_folder):
@@ -23,12 +18,4 @@ for audio in os.listdir(input_folder):
         
         # Saving the Wav file
         sf.write(wav_path, y, sr)
-        
         print('Converted',audio,'into Wav')
-
-
-# In[ ]:
-
-
-
-
